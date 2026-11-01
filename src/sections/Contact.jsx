@@ -46,7 +46,12 @@ export default function Contact() {
     if (Object.keys(errs).length) { setErrors(errs); return }
     setStatus(STATUS.loading)
     try {
-      await new Promise((r) => setTimeout(r, 1200)) // replace with Formspree fetch
+      const res = await fetch('https://formspree.io/f/myeenjvl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ name: form.name, email: form.email, subject: form.subject, message: form.message }),
+      })
+      if (!res.ok) throw new Error()
       setStatus(STATUS.success)
       setForm({ name: '', email: '', subject: '', message: '' })
     } catch {
