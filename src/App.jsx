@@ -14,6 +14,8 @@ import ProjectsPage from './pages/ProjectsPage'
 import EducationPage from './pages/EducationPage'
 import ExperiencePage from './pages/ExperiencePage'
 import BlogPage from './pages/BlogPage'
+import BlogPostPage from './pages/BlogPostPage'
+import AdminPage from './pages/AdminPage'
 import ContactPage from './pages/ContactPage'
 import ResumePage from './pages/ResumePage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -54,6 +56,8 @@ function Layout() {
           <Route path="/education" element={<EducationPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="*" element={<NotFoundPage />} />
