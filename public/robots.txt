@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saurav-portfolio-sandy.vercel.app/sitemap.xml
