@@ -60,10 +60,9 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group select-none" aria-label="Saurav – home">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-            style={{ background: 'rgba(255,255,255,0.9)', boxShadow: '0 0 20px rgba(255,255,255,0.15)' }}>
-            <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-              <polygon points="10,2 18,17 2,17" fill="black" />
+          <div className="flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+              <polygon points="10,2 18,17 2,17" fill="white" />
             </svg>
           </div>
           <span className="text-sm font-bold tracking-[0.15em] uppercase text-white">
