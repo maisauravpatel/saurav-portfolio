@@ -14,9 +14,8 @@ export default function NotFoundPage() {
             <h1 className="font-black leading-none"
               style={{
                 fontSize: 'clamp(120px, 20vw, 200px)',
-                background: 'linear-gradient(135deg, rgba(139,92,246,0.15), rgba(6,182,212,0.1))',
-                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                filter: 'drop-shadow(0 0 40px rgba(139,92,246,0.2))',
+                color: 'rgba(255,255,255,0.06)',
+                filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.08))',
               }}>
               404
             </h1>
@@ -33,12 +32,14 @@ export default function NotFoundPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all hover:opacity-90"
-              style={{ background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)', color: '#fff', boxShadow: '0 0 20px rgba(139,92,246,0.3)' }}>
+              style={{ background: '#FFFFFF', color: '#000000', boxShadow: '0 0 20px rgba(255,255,255,0.12)' }}>
               <Home size={15} /> Go Home
             </Link>
             <button onClick={() => window.history.back()}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-medium transition-all hover:border-purple-400"
-              style={{ border: '1px solid rgba(139,92,246,0.3)', color: '#A78BFA' }}>
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-medium transition-all"
+              style={{ border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)' }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'}>
               <ArrowLeft size={15} /> Go Back
             </button>
           </div>

@@ -9,7 +9,6 @@ const posts = [
     tag: 'AI / ML',
     readTime: '6 min read',
     date: 'Coming soon',
-    color: '#8B5CF6',
     draft: true,
   },
   {
@@ -18,7 +17,6 @@ const posts = [
     tag: 'Android',
     readTime: '8 min read',
     date: 'Coming soon',
-    color: '#06B6D4',
     draft: true,
   },
   {
@@ -27,7 +25,6 @@ const posts = [
     tag: 'Web Dev',
     readTime: '5 min read',
     date: 'Coming soon',
-    color: '#10B981',
     draft: true,
   },
   {
@@ -36,7 +33,6 @@ const posts = [
     tag: 'Backend',
     readTime: '5 min read',
     date: 'Coming soon',
-    color: '#F59E0B',
     draft: true,
   },
 ]
@@ -49,7 +45,7 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
 
           <div className="mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#8B5CF6' }}>Blog</p>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(255,255,255,0.4)' }}>Blog</p>
             <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Articles & Insights</h1>
             <p className="text-lg max-w-2xl" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Writing about AI, Android, web dev, and lessons learned while building real projects.
@@ -58,10 +54,10 @@ export default function BlogPage() {
 
           {/* Coming soon banner */}
           <div className="glass-card p-6 mb-10 flex items-center gap-4"
-            style={{ borderColor: 'rgba(139,92,246,0.3)', background: 'rgba(139,92,246,0.06)' }}>
+            style={{ borderColor: 'rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.04)' }}>
             <div className="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center"
-              style={{ background: 'rgba(139,92,246,0.15)', border: '1px solid rgba(139,92,246,0.3)' }}>
-              <PenLine size={18} style={{ color: '#A78BFA' }} />
+              style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.14)' }}>
+              <PenLine size={18} className="text-white/70" />
             </div>
             <div>
               <p className="text-sm font-semibold text-white">Articles coming soon</p>
@@ -76,14 +72,12 @@ export default function BlogPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="blog-card-tag" style={{ color: post.color, background: `${post.color}18`, border: `1px solid ${post.color}30` }}>
-                        {post.tag}
-                      </span>
+                      <span className="blog-card-tag">{post.tag}</span>
                       <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.3)', border: '1px solid rgba(255,255,255,0.08)' }}>
                         Draft
                       </span>
                     </div>
-                    <h2 className="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">{post.title}</h2>
+                    <h2 className="text-lg font-bold text-white mb-2 group-hover:text-white/80 transition-colors">{post.title}</h2>
                     <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>{post.excerpt}</p>
                     <div className="flex items-center gap-3 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
                       <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime}</span>
@@ -91,7 +85,7 @@ export default function BlogPage() {
                       <span>{post.date}</span>
                     </div>
                   </div>
-                  <ArrowRight size={16} className="flex-shrink-0 mt-1 transition-transform group-hover:translate-x-1" style={{ color: 'rgba(139,92,246,0.4)' }} />
+                  <ArrowRight size={16} className="flex-shrink-0 mt-1 transition-transform group-hover:translate-x-1" style={{ color: 'rgba(255,255,255,0.25)' }} />
                 </div>
               </div>
             ))}

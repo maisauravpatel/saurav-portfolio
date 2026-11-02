@@ -13,7 +13,7 @@ export default function AboutPage() {
 
           {/* Header */}
           <div className="mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#8B5CF6' }}>About Me</p>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(255,255,255,0.4)' }}>About Me</p>
             <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Who I Am</h1>
             <p className="text-lg max-w-2xl" style={{ color: 'rgba(255,255,255,0.5)' }}>
               A passionate developer and AI enthusiast building meaningful software from Greater Noida, India.
@@ -26,7 +26,7 @@ export default function AboutPage() {
             <div className="space-y-8">
               <div className="glass-card p-7">
                 <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Target size={18} style={{ color: '#8B5CF6' }} /> Introduction
+                  <Target size={18} className="text-white/60" /> Introduction
                 </h2>
                 <div className="space-y-4 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
                   <p>Hi, I'm <span className="text-white font-semibold">Saurav Kumar</span> — a Computer Science student specializing in AI & Machine Learning at ITS Engineering College, affiliated with AKTU. I'm deeply passionate about creating technology that solves real problems.</p>
@@ -37,12 +37,14 @@ export default function AboutPage() {
 
               <div className="glass-card p-7">
                 <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Heart size={18} style={{ color: '#EC4899' }} /> Interests & Passions
+                  <Heart size={18} className="text-white/60" /> Interests & Passions
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {interests.map(item => (
-                    <span key={item} className="px-3 py-1.5 text-sm rounded-lg transition-all duration-200 hover:border-purple-400 cursor-default"
-                      style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)', color: '#A78BFA' }}>
+                    <span key={item} className="px-3 py-1.5 text-sm rounded-lg transition-all duration-200 cursor-default"
+                      style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'; e.currentTarget.style.color = '#fff' }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)' }}>
                       {item}
                     </span>
                   ))}
@@ -51,7 +53,7 @@ export default function AboutPage() {
 
               <div className="glass-card p-7">
                 <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Target size={18} style={{ color: '#06B6D4' }} /> Career Goals
+                  <Target size={18} className="text-white/60" /> Career Goals
                 </h2>
                 <div className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                   {[
@@ -61,7 +63,7 @@ export default function AboutPage() {
                     'Work with teams that prioritize craftsmanship, speed, and real-world impact.',
                   ].map((goal, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#06B6D4' }} />
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-white/40" />
                       <span>{goal}</span>
                     </div>
                   ))}
@@ -75,11 +77,11 @@ export default function AboutPage() {
               <div className="glass-card p-6">
                 <img src="/profile.webp" alt="Saurav Kumar"
                   className="w-full rounded-xl object-cover mb-4"
-                  style={{ aspectRatio: '1/1', objectPosition: 'center top', border: '1px solid rgba(139,92,246,0.2)' }} />
+                  style={{ aspectRatio: '1/1', objectPosition: 'center top', border: '1px solid rgba(255,255,255,0.1)' }} />
                 <h3 className="text-lg font-bold text-white">Saurav Kumar</h3>
-                <p className="text-sm mb-3" style={{ color: '#A78BFA' }}>AI & ML Developer</p>
+                <p className="text-sm mb-3" style={{ color: 'rgba(255,255,255,0.55)' }}>AI & ML Developer</p>
                 <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                  <MapPin size={12} style={{ color: '#8B5CF6' }} />
+                  <MapPin size={12} className="text-white/40" />
                   Greater Noida, India
                 </div>
               </div>
@@ -104,10 +106,10 @@ export default function AboutPage() {
               {/* Education highlight */}
               <div className="glass-card p-6">
                 <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-                  <GraduationCap size={14} style={{ color: '#8B5CF6' }} /> Education
+                  <GraduationCap size={14} className="text-white/50" /> Education
                 </h3>
                 <p className="text-sm font-medium text-white">ITS Engineering College</p>
-                <p className="text-xs mb-1" style={{ color: '#A78BFA' }}>B.Tech CSE — AI & ML</p>
+                <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.55)' }}>B.Tech CSE — AI & ML</p>
                 <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>AKTU · 2022 – 2026</p>
               </div>
             </div>

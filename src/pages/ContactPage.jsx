@@ -49,7 +49,7 @@ export default function ContactPage() {
 
   const inputCls = (field) =>
     `w-full px-4 py-3 rounded-xl text-sm text-white/80 placeholder-white/20 outline-none transition-all duration-200 bg-transparent border ${
-      errors[field] ? 'border-red-500/50' : 'border-white/10 focus:border-purple-500/50'
+      errors[field] ? 'border-red-500/50' : 'border-white/10 focus:border-white/30'
     }`
 
   return (
@@ -59,7 +59,7 @@ export default function ContactPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
 
           <div className="mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#8B5CF6' }}>Contact</p>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(255,255,255,0.4)' }}>Contact</p>
             <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Let's Build Something Together</h1>
             <p className="text-lg max-w-2xl" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Got a project idea, internship opportunity, or just want to say hi? I'd love to hear from you.
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   <a href={`mailto:${socialLinks.email}`}
                     className="flex items-center gap-3 text-xs transition-colors hover:text-white"
                     style={{ color: 'rgba(255,255,255,0.4)' }}>
-                    <Mail size={14} style={{ color: '#8B5CF6' }} /> {socialLinks.email}
+                    <Mail size={14} className="text-white/50" /> {socialLinks.email}
                   </a>
                   <a href={socialLinks.github} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 text-xs transition-colors hover:text-white"
@@ -148,7 +148,7 @@ export default function ContactPage() {
 
               <button type="submit" disabled={status === STATUS.loading}
                 className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90 active:scale-[0.99] disabled:opacity-60"
-                style={{ background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)', color: '#fff', boxShadow: '0 0 20px rgba(139,92,246,0.3)' }}>
+                style={{ background: '#FFFFFF', color: '#000000', boxShadow: '0 0 20px rgba(255,255,255,0.1)' }}>
                 {status === STATUS.loading
                   ? <><Loader size={14} className="animate-spin" /> Sending...</>
                   : <><Send size={14} /> Send Message</>}

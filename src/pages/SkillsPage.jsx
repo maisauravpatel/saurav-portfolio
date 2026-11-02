@@ -5,7 +5,6 @@ import SEO from '../components/SEO'
 const skillGroups = [
   {
     category: 'Languages',
-    color: '#8B5CF6',
     skills: [
       { name: 'Python', level: 85 },
       { name: 'Java', level: 80 },
@@ -15,7 +14,6 @@ const skillGroups = [
   },
   {
     category: 'Frontend',
-    color: '#06B6D4',
     skills: [
       { name: 'React.js', level: 80 },
       { name: 'Tailwind CSS', level: 85 },
@@ -25,7 +23,6 @@ const skillGroups = [
   },
   {
     category: 'Backend & DB',
-    color: '#10B981',
     skills: [
       { name: 'Node.js / Express', level: 75 },
       { name: 'MongoDB', level: 72 },
@@ -35,7 +32,6 @@ const skillGroups = [
   },
   {
     category: 'AI / ML',
-    color: '#F59E0B',
     skills: [
       { name: 'Machine Learning', level: 70 },
       { name: 'TensorFlow / Keras', level: 60 },
@@ -45,7 +41,6 @@ const skillGroups = [
   },
   {
     category: 'Mobile',
-    color: '#EC4899',
     skills: [
       { name: 'Android (Java)', level: 78 },
       { name: 'Android Studio', level: 75 },
@@ -55,7 +50,6 @@ const skillGroups = [
   },
   {
     category: 'Tools & DevOps',
-    color: '#6366F1',
     skills: [
       { name: 'Git / GitHub', level: 85 },
       { name: 'VS Code', level: 90 },
@@ -91,7 +85,7 @@ export default function SkillsPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
 
           <div className="mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#8B5CF6' }}>Technical Skills</p>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(255,255,255,0.4)' }}>Technical Skills</p>
             <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">What I Work With</h1>
             <p className="text-lg max-w-2xl" style={{ color: 'rgba(255,255,255,0.5)' }}>
               A snapshot of my technical abilities across languages, frameworks, tools, and domains.
@@ -103,19 +97,19 @@ export default function SkillsPage() {
             {skillGroups.map(group => (
               <div key={group.category} className="skill-group opacity-0 glass-card p-6">
                 <h2 className="text-sm font-bold uppercase tracking-wider mb-5 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full" style={{ background: group.color }} />
-                  <span style={{ color: group.color }}>{group.category}</span>
+                  <span className="w-2 h-2 rounded-full bg-white/60" />
+                  <span className="text-white/80">{group.category}</span>
                 </h2>
                 <div className="space-y-4">
                   {group.skills.map(skill => (
                     <div key={skill.name}>
                       <div className="flex justify-between text-xs mb-1.5">
                         <span className="text-white/80 font-medium">{skill.name}</span>
-                        <span style={{ color: group.color }}>{skill.level}%</span>
+                        <span style={{ color: 'rgba(255,255,255,0.5)' }}>{skill.level}%</span>
                       </div>
                       <div className="h-1 rounded-full" style={{ background: 'rgba(255,255,255,0.06)' }}>
                         <div className="skill-bar-fill h-1 rounded-full"
-                          style={{ width: `${skill.level}%`, background: `linear-gradient(90deg, ${group.color}, ${group.color}99)` }} />
+                          style={{ width: `${skill.level}%` }} />
                       </div>
                     </div>
                   ))}
@@ -131,7 +125,9 @@ export default function SkillsPage() {
               {tools.map(tool => (
                 <span key={tool}
                   className="px-4 py-2 text-sm rounded-xl transition-all duration-200 cursor-default hover:scale-105"
-                  style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)', color: '#A78BFA' }}>
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.65)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'; e.currentTarget.style.color = '#fff' }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}>
                   {tool}
                 </span>
               ))}

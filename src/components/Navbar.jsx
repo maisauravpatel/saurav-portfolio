@@ -54,21 +54,20 @@ export default function Navbar() {
         scrolled ? 'backdrop-blur-xl border-b' : 'bg-transparent'
       }`}
       style={scrolled ? {
-        background: 'rgba(5,0,16,0.85)',
-        borderColor: 'rgba(139,92,246,0.15)',
+        background: 'rgba(0,0,0,0.85)',
+        borderColor: 'rgba(255,255,255,0.08)',
       } : {}}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group select-none" aria-label="Saurav – home">
           <div className="w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-            style={{ background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)', boxShadow: '0 0 20px rgba(139,92,246,0.4)' }}>
+            style={{ background: 'rgba(255,255,255,0.9)', boxShadow: '0 0 20px rgba(255,255,255,0.15)' }}>
             <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-              <polygon points="10,2 18,17 2,17" fill="white" />
+              <polygon points="10,2 18,17 2,17" fill="black" />
             </svg>
           </div>
-          <span className="text-sm font-bold tracking-[0.15em] uppercase"
-            style={{ background: 'linear-gradient(135deg, #fff, #A78BFA)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <span className="text-sm font-bold tracking-[0.15em] uppercase text-white">
             Saurav
           </span>
         </Link>
@@ -87,8 +86,7 @@ export default function Navbar() {
               >
                 {link.label}
                 {isActive(link.path) && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-px rounded-full"
-                    style={{ background: 'linear-gradient(90deg, #8B5CF6, #06B6D4)' }} />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-px rounded-full bg-white" />
                 )}
               </Link>
             </li>
@@ -100,12 +98,12 @@ export default function Navbar() {
           to="/resume"
           className="hidden lg:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-all duration-200"
           style={{
-            background: 'rgba(139,92,246,0.12)',
-            border: '1px solid rgba(139,92,246,0.3)',
-            color: '#A78BFA',
+            background: 'rgba(255,255,255,0.08)',
+            border: '1px solid rgba(255,255,255,0.18)',
+            color: 'rgba(255,255,255,0.8)',
           }}
-          onMouseEnter={e => e.currentTarget.style.background = 'rgba(139,92,246,0.22)'}
-          onMouseLeave={e => e.currentTarget.style.background = 'rgba(139,92,246,0.12)'}
+          onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.14)'}
+          onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
         >
           <Download size={12} />
           Resume
@@ -124,7 +122,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div ref={mobileMenuRef} className="lg:hidden backdrop-blur-xl border-b"
-          style={{ background: 'rgba(5,0,16,0.95)', borderColor: 'rgba(139,92,246,0.15)' }}>
+          style={{ background: 'rgba(0,0,0,0.95)', borderColor: 'rgba(255,255,255,0.08)' }}>
           <ul className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <li key={link.path}>
@@ -140,8 +138,8 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="pt-3 mt-1 border-t" style={{ borderColor: 'rgba(139,92,246,0.15)' }}>
-              <Link to="/resume" className="flex items-center gap-2 px-3 py-2 text-sm" style={{ color: '#A78BFA' }}>
+            <li className="pt-3 mt-1 border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+              <Link to="/resume" className="flex items-center gap-2 px-3 py-2 text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 <Download size={13} /> Resume
               </Link>
             </li>

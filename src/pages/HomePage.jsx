@@ -31,10 +31,10 @@ export default function HomePage() {
       <div ref={heroRef}>
         {/* ─── Hero ─── */}
         <section className="relative min-h-screen flex flex-col justify-center overflow-hidden"
-          style={{ background: 'linear-gradient(180deg, #050010 0%, #0A0020 100%)' }}>
-          {/* Decorative lines */}
+          style={{ background: '#000000' }}>
+          {/* Subtle grid */}
           <div className="absolute inset-0 pointer-events-none"
-            style={{ backgroundImage: 'linear-gradient(rgba(139,92,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
+            style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
           <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-14 pt-32 pb-24">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-center">
@@ -46,7 +46,7 @@ export default function HomePage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
                   </span>
-                  <span className="text-[11px] font-semibold tracking-[0.22em] uppercase" style={{ color: 'rgba(167,139,250,0.7)' }}>
+                  <span className="text-[11px] font-semibold tracking-[0.22em] uppercase" style={{ color: 'rgba(255,255,255,0.5)' }}>
                     Available for opportunities
                   </span>
                 </div>
@@ -55,9 +55,8 @@ export default function HomePage() {
                   <h1 className="h-name opacity-0 font-black leading-none tracking-tighter select-none"
                     style={{
                       fontSize: 'clamp(64px, 12vw, 180px)',
-                      background: 'linear-gradient(135deg, #FFFFFF 0%, #E8D9FF 55%, #A78BFA 100%)',
-                      WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                      filter: 'drop-shadow(0 0 60px rgba(139,92,246,0.3))',
+                      color: '#FFFFFF',
+                      filter: 'drop-shadow(0 0 60px rgba(255,255,255,0.15))',
                     }}>SAURAV</h1>
                 </div>
                 <div className="overflow-hidden mb-10">
@@ -69,24 +68,24 @@ export default function HomePage() {
 
                 <div className="h-roles opacity-0 flex flex-wrap items-center gap-2 mb-8">
                   {[
-                    { label: 'CS Student', color: 'rgba(255,255,255,0.3)' },
-                    { label: 'AI & ML', color: '#A78BFA' },
-                    { label: 'Full-Stack Dev', color: 'rgba(255,255,255,0.3)' },
-                    { label: 'Android', color: '#06B6D4' },
+                    { label: 'CS Student', color: 'rgba(255,255,255,0.35)' },
+                    { label: 'AI & ML', color: 'rgba(255,255,255,0.9)' },
+                    { label: 'Full-Stack Dev', color: 'rgba(255,255,255,0.35)' },
+                    { label: 'Android', color: 'rgba(255,255,255,0.6)' },
                   ].map((item, i, arr) => (
                     <React.Fragment key={item.label}>
                       <span className="text-sm font-medium" style={{ color: item.color }}>{item.label}</span>
-                      {i < arr.length - 1 && <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(139,92,246,0.4)', display: 'inline-block' }} />}
+                      {i < arr.length - 1 && <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', display: 'inline-block' }} />}
                     </React.Fragment>
                   ))}
                 </div>
 
                 <div className="h-divider mb-8"
-                  style={{ height: '1px', background: 'linear-gradient(90deg, rgba(139,92,246,0.5), rgba(6,182,212,0.2), transparent)' }} />
+                  style={{ height: '1px', background: 'linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.08), transparent)' }} />
 
                 <div className="flex flex-wrap items-center gap-4">
                   <span className="text-xs font-mono tracking-widest" style={{ color: 'rgba(255,255,255,0.2)' }}>GREATER NOIDA, IN</span>
-                  <span style={{ color: 'rgba(139,92,246,0.3)' }}>·</span>
+                  <span style={{ color: 'rgba(255,255,255,0.15)' }}>·</span>
                   <span className="text-xs font-mono tracking-widest" style={{ color: 'rgba(255,255,255,0.2)' }}>B.TECH CSE · AKTU</span>
                 </div>
               </div>
@@ -95,41 +94,43 @@ export default function HomePage() {
               <div className="h-right opacity-0 flex flex-col gap-5">
                 <div className="relative">
                   <div className="rounded-2xl overflow-hidden w-full"
-                    style={{ border: '1px solid rgba(139,92,246,0.2)', boxShadow: '0 0 60px rgba(139,92,246,0.15)' }}>
+                    style={{ border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 0 60px rgba(255,255,255,0.06)' }}>
                     <img src="/profile.webp" alt="Saurav Kumar" className="w-full object-cover block"
                       style={{ aspectRatio: '4/4.5', objectPosition: 'center top' }} />
                     <div className="absolute bottom-0 left-0 right-0 h-20"
-                      style={{ background: 'linear-gradient(to top, rgba(5,0,16,0.9), transparent)' }} />
+                      style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)' }} />
                   </div>
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3.5 py-2 rounded-xl"
-                    style={{ background: 'rgba(5,0,16,0.8)', backdropFilter: 'blur(12px)', border: '1px solid rgba(139,92,246,0.2)' }}>
+                    style={{ background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.1)' }}>
                     <span className="text-xs font-semibold text-white/80">Saurav Kumar</span>
-                    <span className="text-[10px] font-mono" style={{ color: '#A78BFA' }}>@maisauravpatel</span>
+                    <span className="text-[10px] font-mono" style={{ color: 'rgba(255,255,255,0.5)' }}>@maisauravpatel</span>
                   </div>
                   <div className="absolute -bottom-4 left-8 right-8 h-6 blur-2xl pointer-events-none"
-                    style={{ background: 'rgba(139,92,246,0.4)' }} />
+                    style={{ background: 'rgba(255,255,255,0.12)' }} />
                 </div>
 
                 <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                  Specializing in <span className="font-medium" style={{ color: '#A78BFA' }}>AI & Machine Learning</span> at ITS Engineering College.
+                  Specializing in <span className="font-medium text-white">AI & Machine Learning</span> at ITS Engineering College.
                   Passionate about building software that actually matters.
                 </p>
 
                 <div className="grid grid-cols-2 gap-2.5">
                   <Link to="/projects"
                     className="py-3 rounded-xl text-sm font-semibold text-center transition-all duration-200 hover:opacity-90 active:scale-95"
-                    style={{ background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)', color: '#fff', boxShadow: '0 0 20px rgba(139,92,246,0.3)' }}>
+                    style={{ background: '#FFFFFF', color: '#000000', boxShadow: '0 0 20px rgba(255,255,255,0.15)' }}>
                     View Work
                   </Link>
                   <Link to="/contact"
-                    className="py-3 rounded-xl text-sm font-medium text-center transition-all duration-200 hover:border-purple-400"
-                    style={{ border: '1px solid rgba(139,92,246,0.3)', color: 'rgba(255,255,255,0.6)' }}>
+                    className="py-3 rounded-xl text-sm font-medium text-center transition-all duration-200"
+                    style={{ border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)'}
+                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'}>
                     Get in Touch
                   </Link>
                 </div>
 
                 <div className="h-socials opacity-0 flex items-center gap-4 pt-3"
-                  style={{ borderTop: '1px solid rgba(139,92,246,0.15)' }}>
+                  style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                   <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform" aria-label="GitHub">
                     <GithubIcon size={18} className="text-white/50 hover:text-white transition-colors" />
                   </a>
@@ -156,14 +157,14 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { icon: Brain, title: 'AI & Machine Learning', desc: 'Building intelligent systems with Python, TensorFlow, and data-driven approaches.', color: '#8B5CF6' },
-                { icon: Code2, title: 'Full-Stack Development', desc: 'End-to-end web apps with React, Node.js, MongoDB, and modern tooling.', color: '#06B6D4' },
-                { icon: Zap, title: 'Android Development', desc: 'Native Android apps using Java with real-time features and secure architectures.', color: '#F59E0B' },
+                { icon: Brain, title: 'AI & Machine Learning', desc: 'Building intelligent systems with Python, TensorFlow, and data-driven approaches.' },
+                { icon: Code2, title: 'Full-Stack Development', desc: 'End-to-end web apps with React, Node.js, MongoDB, and modern tooling.' },
+                { icon: Zap, title: 'Android Development', desc: 'Native Android apps using Java with real-time features and secure architectures.' },
               ].map((item) => (
                 <div key={item.title} className="h-features opacity-0 glass-card p-6 group">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110"
-                    style={{ background: `${item.color}18`, border: `1px solid ${item.color}30` }}>
-                    <item.icon size={20} style={{ color: item.color }} />
+                    style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                    <item.icon size={20} className="text-white/70" />
                   </div>
                   <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>{item.desc}</p>
@@ -178,11 +179,13 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#8B5CF6' }}>Featured Work</p>
+                <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: 'rgba(255,255,255,0.4)' }}>Featured Work</p>
                 <h2 className="text-3xl font-bold gradient-text">Recent Projects</h2>
               </div>
               <Link to="/projects" className="flex items-center gap-2 text-sm transition-colors"
-                style={{ color: '#A78BFA' }} onMouseEnter={e => e.currentTarget.style.gap = '10px'}>
+                style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}>
                 All projects <ArrowRight size={14} />
               </Link>
             </div>
@@ -191,13 +194,13 @@ export default function HomePage() {
                 <div key={p.id} className="glass-card p-6 group">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-2xl">{p.icon}</span>
-                    <span className="text-xs px-2 py-0.5 rounded-full text-xs" style={{ background: 'rgba(139,92,246,0.12)', color: '#A78BFA', border: '1px solid rgba(139,92,246,0.2)' }}>{p.category}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.55)', border: '1px solid rgba(255,255,255,0.1)' }}>{p.category}</span>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">{p.title}</h3>
                   <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>{p.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {p.tech.slice(0, 3).map(t => (
-                      <span key={t} className="text-xs px-2 py-0.5 rounded-md" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.5)', border: '1px solid rgba(255,255,255,0.08)' }}>{t}</span>
+                      <span key={t} className="text-xs px-2 py-0.5 rounded-md" style={{ background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.4)', border: '1px solid rgba(255,255,255,0.08)' }}>{t}</span>
                     ))}
                   </div>
                 </div>
