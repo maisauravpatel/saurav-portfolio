@@ -13,8 +13,7 @@ export default function HomePage() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.2 })
-      tl.fromTo('.h-badge', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' })
-        .fromTo('.h-name', { opacity: 0, y: 80, skewY: 4 }, { opacity: 1, y: 0, skewY: 0, duration: 1, ease: 'power4.out' }, '-=0.1')
+      tl.fromTo('.h-name', { opacity: 0, y: 80, skewY: 4 }, { opacity: 1, y: 0, skewY: 0, duration: 1, ease: 'power4.out' })
         .fromTo('.h-ghost', { opacity: 0, y: 80, skewY: 4 }, { opacity: 1, y: 0, skewY: 0, duration: 1, ease: 'power4.out' }, '-=0.65')
         .fromTo('.h-roles', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.4')
         .fromTo('.h-divider', { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: 'power2.inOut', transformOrigin: 'left' }, '-=0.3')
@@ -41,17 +40,7 @@ export default function HomePage() {
 
               {/* LEFT */}
               <div>
-                <div className="h-badge opacity-0 inline-flex items-center gap-2.5 mb-10">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
-                  </span>
-                  <span className="text-[11px] font-semibold tracking-[0.22em] uppercase" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                    Available for opportunities
-                  </span>
-                </div>
-
-                <div className="overflow-hidden">
+<div className="overflow-hidden">
                   <h1 className="h-name opacity-0 font-black leading-none tracking-tighter select-none"
                     style={{
                       fontSize: 'clamp(64px, 12vw, 180px)',
