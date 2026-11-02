@@ -50,13 +50,12 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'backdrop-blur-xl border-b' : 'bg-transparent'
-      }`}
-      style={scrolled ? {
-        background: 'rgba(0,0,0,0.85)',
-        borderColor: 'rgba(255,255,255,0.08)',
-      } : {}}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 backdrop-blur-xl border-b"
+      style={{
+        background: scrolled ? 'rgba(0,0,0,0.88)' : 'rgba(255,255,255,0.03)',
+        borderColor: scrolled ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)',
+        boxShadow: scrolled ? '0 4px 30px rgba(0,0,0,0.4)' : 'none',
+      }}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
